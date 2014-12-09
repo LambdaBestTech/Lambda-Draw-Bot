@@ -5,11 +5,11 @@ This is the build project for the Lambda Pledge Class of the Theta Tau Epsilon D
 
 So far, the project consists of the following materials: 
 
-	* Arduino Uno
-	* External battery charger for Android / iPhones (used to externally power the Arduino)
-	* Two continuous servo motors with wheels
-	* One standard servo motor with rubber band so that the pen can be attached
-	* LaserCAMM cut acrylic
+* Arduino Uno
+* External battery charger for Android / iPhones (used to externally power the Arduino)
+* Two continuous servo motors with wheels
+* One standard servo motor with rubber band so that the pen can be attached
+* LaserCAMM cut acrylic
 
 It is highly recommended you compile and develop your main driver on the Arduino IDE if you are a beginner. You can [download it here][arduino_download].
 
@@ -46,19 +46,19 @@ Credits
 
 Created by the Lambda Pledge Class
 	
-	* Abouremeleh, Yusef
-	* Deng, David
-	* Fields, Alex
-	* Guiterrez, Christian
-	* Huynh, Blake
-	* Kim, Kaiser
-	* Li, Claire
-	* Lin, Wendy
-	* Tea, Teddy
-	* Tiwapong, Nat
-	* Tunchez, Alex
-	* Wong, Eunice
-	* Zhou, Jesse
+	Abouremeleh, Yusef
+	Deng, David
+	Fields, Alex
+	Guiterrez, Christian
+	Huynh, Blake
+	Kim, Kaiser
+	Li, Claire
+	Lin, Wendy
+	Tea, Teddy
+	Tiwapong, Nat
+	Tunchez, Alex
+	Wong, Eunice
+	Zhou, Jesse
 
 Special thanks to our Pledge Instructor and Pledge Marshall for giving us the opportunity to work on this project.
 
