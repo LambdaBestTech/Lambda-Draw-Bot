@@ -45,6 +45,7 @@ Credits
 --------------
 
 Created by the Lambda Pledge Class
+	
 	* Abouremeleh, Yusef
 	* Deng, David
 	* Fields, Alex
