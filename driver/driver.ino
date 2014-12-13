@@ -4,10 +4,13 @@
 
 Servo leftWheel, rightWheel;
 
+Servo penServo; //create servo object
+
 void setup(){
   
    leftWheel.attach(LEFT);
    rightWheel.attach(RIGHT);
+   penServo.attach(PEN);
    
 }
 
