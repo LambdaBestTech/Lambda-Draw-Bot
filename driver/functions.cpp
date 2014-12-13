@@ -37,3 +37,16 @@ void turnRight(Servo *leftWheel, Servo *rightWheel, int duration){
   rightWheel->write(RIGHT_BACKWARD);
   delay(duration);
 }
+
+void penUp(Servo *myServo) //lifts the pen up
+{
+ myServo->write(UP); 
+}
+
+void penDown(Servo *myServo) //brings the pen down
+{
+  myServo->write(DOWN);
+}
+
+
+
