@@ -1,4 +1,6 @@
 #include <Servo.h>
+#define UP 150 //UP is defined to be 150 degrees
+#define DOWN 90 //DOWN is defined to be 90 degrees
 
 Servo myServo; //create servo object
 
@@ -20,12 +22,12 @@ void loop()
 
 void penUp() //lifts the pen up
 {
- myServo.write(150); 
+ myServo.write(UP); 
 }
 
 void penDown() //brings the pen down
 {
-  myServo.write(90);
+  myServo.write(DOWN);
 }
 
 
