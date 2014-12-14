@@ -8,7 +8,11 @@ void turnLeft(Servo *leftWheel, Servo *rightWheel, int duration);
 void turnRight(Servo *leftWheel, Servo *rightWheel, int duration);
 
 // pen functions
-void penUp(Servo *myServo);
-void penDown(Servo *myServo);
+void penUp(Servo *leftWheel, Servo *rightWheel, Servo *myServo);
+void penDown(Servo *leftWheel, Servo *rightWheel, Servo *myServo);
+void calibratePen(Servo *penServo);
+
+// procedure functions
+void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 
 #endif
