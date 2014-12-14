@@ -2,22 +2,6 @@
 #include <Servo.h>
 #include "constants.h"
 
-void forward(Servo *leftWheel, Servo *rightWheel, int duration){
-
-  leftWheel->write(LEFT_FORWARD);
-  rightWheel->write(RIGHT_FORWARD);
-  delay(duration);
-
-}
-
-void backward(Servo *leftWheel, Servo *rightWheel, int duration){
-
-  leftWheel->write(LEFT_BACKWARD);
-  rightWheel->write(RIGHT_BACKWARD);
-  delay(duration);
-  
-}
-
 void stopBot(Servo *leftWheel, Servo *rightWheel, int duration){
   
   leftWheel->write(STOP_LEFT);
@@ -26,27 +10,72 @@ void stopBot(Servo *leftWheel, Servo *rightWheel, int duration){
   
 }
 
+void forward(Servo *leftWheel, Servo *rightWheel, int duration){
+
+  leftWheel->write(LEFT_FORWARD);
+  rightWheel->write(RIGHT_FORWARD);
+  delay(duration);
+  stopBot(leftWheel, rightWheel, PAUSE);
+  
+}
+
+void backward(Servo *leftWheel, Servo *rightWheel, int duration){
+
+  leftWheel->write(LEFT_BACKWARD);
+  rightWheel->write(RIGHT_BACKWARD);
+  delay(duration);
+  stopBot(leftWheel, rightWheel, PAUSE);
+  
+}
+
 void turnLeft(Servo *leftWheel, Servo *rightWheel, int duration){
   leftWheel->write(LEFT_BACKWARD);
   rightWheel->write(RIGHT_FORWARD);
   delay(duration);
+  stopBot(leftWheel, rightWheel, PAUSE);
+  
 }
 
 void turnRight(Servo *leftWheel, Servo *rightWheel, int duration){
   leftWheel->write(LEFT_FORWARD);
   rightWheel->write(RIGHT_BACKWARD);
   delay(duration);
+  stopBot(leftWheel, rightWheel, PAUSE);
+  
 }
 
-void penUp(Servo *myServo) //lifts the pen up
+//lifts the pen up
+void penUp(Servo *leftWheel, Servo *rightWheel, Servo *myServo)
 {
- myServo->write(UP); 
+ myServo->write(UP);
+ stopBot(leftWheel, rightWheel, PAUSE);
 }
 
-void penDown(Servo *myServo) //brings the pen down
+//brings the pen down
+void penDown(Servo *leftWheel, Servo *rightWheel, Servo *myServo) 
 {
   myServo->write(DOWN);
+  stopBot(leftWheel, rightWheel, PAUSE);
 }
 
+void calibratePen(Servo *penServo){
+  //Start with the pen down to calibrate.
+   //Attach the pen at this point.
+   //You will have 5 seconds to attach the pen.
+   penServo->write(DOWN);
+   delay(5000);
+   
+   //Tests the penServo movement by moving it up
+   //and down. If this satisfies the user, then continue.
+   //Otherwise, power off and restart.
+   for(int i = 0; i < 3; i++){
+     penServo->write(UP);
+     delay(300);
+     penServo->write(DOWN);
+     delay(300);
+   }
+   
+   delay(PAUSE); // Delays slightly to wait for user
+}
 
 

@@ -1,0 +1,11 @@
+forward(&leftWheel, &rightWheel, DISTANCE);
+stopBot(&leftWheel, &rightWheel, DISTANCE);
+
+turnLeft(&leftWheel, &rightWheel, LEFT_TURN_90_DEGREES);
+stopBot(&leftWheel, &rightWheel, DISTANCE);
+
+forward(&leftWheel, &rightWheel, DISTANCE);
+stopBot(&leftWheel, &rightWheel, DISTANCE);
+
+turnRight(&leftWheel, &rightWheel, RIGHT_TURN_90_DEGREES);
+stopBot(&leftWheel, &rightWheel, DISTANCE);

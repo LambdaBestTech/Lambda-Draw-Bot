@@ -12,10 +12,11 @@ void setup(){
    rightWheel.attach(RIGHT);
    penServo.attach(PEN);
    
+   stopBot(&leftWheel, &rightWheel, 1000); // Stop bot from moving
+   calibratePen(&penServo); // Calibrate the pen, in case it isn't attached yet
+   
 }
 
 void loop(){
-  stopBot(&leftWheel, &rightWheel, 3000);
-  forward(&leftWheel, &rightWheel, 3000);
-
+  
 }
