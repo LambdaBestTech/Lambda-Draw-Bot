@@ -17,4 +17,6 @@ void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 
 void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 
+void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
+
 #endif

@@ -19,6 +19,10 @@
 #define DIST_SERIF 1000 //currently random
 #define DIST_MIDDLE 1000 //currently random
 
+#define DIST 1000 //currently random
+#define DIST_SERIF 1000 //currently random
+#define DIST_MIDDLE 1000 //currently random
+
 #define UP 150 //Up is defined to be 150 degrees
 #define DOWN 95 //Down is defined to be 90 degrees
 
