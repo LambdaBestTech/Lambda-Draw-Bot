@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  “Constructing the base“
+title:  Constructing the base
 date:   2014-11-25 23:00:54
 categories: hardware
 ---
