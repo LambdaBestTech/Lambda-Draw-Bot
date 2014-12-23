@@ -14,9 +14,7 @@ void calibratePen(Servo *penServo);
 
 // procedure functions
 void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
-
 void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
-
-void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
+void moveToTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 
 #endif

@@ -13,7 +13,7 @@
 #define RIGHT_TURN_90_DEGREES 920
 
 //The following constants are for a perfect Theta 
-#define THETA_RIGHT_TURN 470
+#define THETA_RIGHT_TURN 476
 
 #define DIST 1000 //currently random
 #define DIST_SERIF 1000 //currently random

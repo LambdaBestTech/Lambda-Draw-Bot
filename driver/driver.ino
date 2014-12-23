@@ -16,9 +16,12 @@ void setup(){
    calibratePen(&penServo); // Calibrate the pen, in case it isn't attached yet
    
 }
-
 void loop(){
-  
+drawTheta( &leftWheel, &rightWheel, &penServo );
+moveToTau( &leftWheel, &rightWheel, &penServo);
+drawTau( &leftWheel, &rightWheel, &penServo);
 }
+  
+
 
 
