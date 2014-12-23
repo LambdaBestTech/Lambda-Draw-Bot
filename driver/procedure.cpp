@@ -59,10 +59,9 @@ void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
 }
 
 void moveToTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
-  forward(leftWheel, rightWheel, DISTANCE*.417);
-  penDown(leftWheel, rightWheel, penServo);   //Put pen down to start drawing
-  turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES / 2);
-  turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
+  forward(leftWheel, rightWheel, DISTANCE*(.417 + .146)); //Moving over to the next letter
+  turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES * 1.5);
+  //turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
   
  /* turnLeft(leftWheel, rightWheel, LEFT_TURN_90_DEGREES / 2); //Move to the top of the Theta
   forward(leftWheel, rightWheel, DISTANCE*.087);
@@ -77,21 +76,21 @@ void moveToTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
 void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
   
   //DRAWING THE SERIF MARKS AND TOP PART OF TAU
-  
-  forward(leftWheel, rightWheel, DISTANCE*.073); //drawing left serif
+  penDown(leftWheel, rightWheel, penServo);   //Put pen down to start drawing
+  forward(leftWheel, rightWheel, DISTANCE*.09); //drawing left serif
   // penUp(leftWheel, rightWheel, penServo); //Raise pen up
-  backward(leftWheel, rightWheel, DISTANCE*.073); //Move to initial point
+  backward(leftWheel, rightWheel, DISTANCE*.09); //Move to initial point
   
-  turnLeft(leftWheel, rightWheel, LEFT_TURN_90_DEGREES); //Turn to draw top of T
+  turnLeft(leftWheel, rightWheel, LEFT_TURN_90_DEGREES * 1.1); //Turn to draw top of T
   //penDown(leftWheel, rightWheel, penServo);
   forward(leftWheel, rightWheel, DISTANCE*.293 + 2*(DISTANCE*.207));  //drawing top part of T
   
   turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
-  forward(leftWheel, rightWheel, DISTANCE*.073);  //drawing right serif
+  forward(leftWheel, rightWheel, DISTANCE*.075);  //drawing right serif
   
   //Now we want to move it to the center of T to continue drawing middle part of Tau
   //penUp(leftWheel, rightWheel, penServo);    //penUp so it doesn't leave a trail  
-  backward(leftWheel, rightWheel, DISTANCE*.073);
+  backward(leftWheel, rightWheel, DISTANCE*.075);
   turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
   penUp(leftWheel, rightWheel, penServo);  //penUp so it doesn't leave a trail
   forward(leftWheel, rightWheel, (DISTANCE*.293 + 2*(DISTANCE*.207)) / 2); // Move to the top center of Tau  
@@ -103,7 +102,7 @@ void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
   //DRAW BOTTOM PART OF TAU
   turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
   forward(leftWheel, rightWheel, DISTANCE*.073);
-  backward(leftWheel, rightWheel, DISTANCE*.120);
+  backward(leftWheel, rightWheel, DISTANCE*.135);
   penUp(leftWheel, rightWheel, penServo);  //completed drawing Tau, pen up. 
   stopBot(leftWheel, rightWheel, DISTANCE);  //finished drawing, freeze for ten seconds.   
 }
