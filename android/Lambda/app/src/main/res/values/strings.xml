@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lambda</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="claire_1">Lambda Draw Bot - Operation Panel</string>
+    <string name="claire_2">Theta Tau</string>
+
+</resources>
