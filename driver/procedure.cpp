@@ -3,6 +3,12 @@
 #include "constants.h"
 #include "functions.h"
 
+void drawTT(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
+    drawTheta(leftWheel, rightWheel, penServo);
+    moveToTau(leftWheel, rightWheel, penServo);
+    drawTau(leftWheel, rightWheel, penServo);
+}
+
 void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo){
   
   ///// DRAW THE OUTER SHELL OF THE THETA /////
