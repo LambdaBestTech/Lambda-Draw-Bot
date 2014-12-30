@@ -16,5 +16,6 @@ void calibratePen(Servo *penServo);
 void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 void drawTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 void moveToTau(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
+void drawTT(Servo *leftWheel, Servo *rightWheel, Servo *penServo);
 
 #endif
