@@ -9,11 +9,11 @@
 #define STOP_LEFT 95
 #define STOP_RIGHT 94
 
-#define LEFT_TURN_90_DEGREES 890
-#define RIGHT_TURN_90_DEGREES 920
+#define LEFT_TURN_90_DEGREES 880
+#define RIGHT_TURN_90_DEGREES 880
 
 //The following constants are for a perfect Theta 
-#define THETA_RIGHT_TURN 476
+#define THETA_RIGHT_TURN 450
 
 #define DIST 1000 //currently random
 #define DIST_SERIF 1000 //currently random
@@ -28,7 +28,7 @@
 
 //TEST CONSTANTS
 
-#define DISTANCE 1000
+#define DISTANCE 3000
 #define PAUSE 500
 
 // BLUETOOTH COMMAND CONSTANTS

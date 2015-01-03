@@ -15,10 +15,10 @@ void setup(){
    penServo.attach(PEN);
    
    stopBot(&leftWheel, &rightWheel, 1000); // Stop bot from moving
-   calibratePen(&penServo); // Calibrate the pen, in case it isn't attached yet
    
 }
 void loop(){
+    
   if(Serial.available() > 0){
 
     int received = Serial.read();

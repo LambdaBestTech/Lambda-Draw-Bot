@@ -17,6 +17,7 @@ void turnRight(Servo *leftWheel, Servo *rightWheel, int duration);
 void penUp(Servo *leftWheel, Servo *rightWheel, Servo *myServo);
 void penDown(Servo *leftWheel, Servo *rightWheel, Servo *myServo);
 void calibratePen(Servo *penServo);
+void calibrateTurn(Servo *leftWheel, Servo*rightWheel);
 
 // procedure functions
 void drawTheta(Servo *leftWheel, Servo *rightWheel, Servo *penServo);

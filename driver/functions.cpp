@@ -78,4 +78,11 @@ void calibratePen(Servo *penServo){
    delay(PAUSE); // Delays slightly to wait for user
 }
 
+void calibrateTurn(Servo *leftWheel, Servo *rightWheel){
+  forward(leftWheel, rightWheel, 500);
+  turnRight(leftWheel, rightWheel, RIGHT_TURN_90_DEGREES);
+  forward(leftWheel, rightWheel, 500);
+  turnLeft(leftWheel, rightWheel, LEFT_TURN_90_DEGREES);
+}
+
 
