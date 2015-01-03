@@ -22,13 +22,32 @@ void loop(){
   if(Serial.available() > 0){
 
     int received = Serial.read();
-    if(received == DRAW_THETA_TAU){
-      drawTT(&leftWheel, &rightWheel, &penServo);
-      Serial.println("Writing Theta Tau letters...");
-    }
-    else if(received == STOP_DRAWING){
-      stopBot(&leftWheel, &rightWheel, 1000);
-      Serial.println("Stopping Drawbot...");
+    
+    switch(received){
+      case DRAW_THETA_TAU:
+        drawTT(&leftWheel, &rightWheel, &penServo);
+        break;
+      case MOVE_FORWARD:
+        controlForward(&leftWheel, &rightWheel);
+        break;
+      case MOVE_BACKWARD:
+        controlBackward(&leftWheel, &rightWheel);
+        break;
+      case MOVE_RIGHT:
+        controlRight(&leftWheel, &rightWheel);
+        break;
+      case MOVE_LEFT:
+        controlLeft(&leftWheel, &rightWheel);
+        break;
+      case MOVE_STOP:
+        controlStop(&leftWheel, &rightWheel);
+        break;
+      case PEN_UP:
+        penUp(&leftWheel, &rightWheel, &penServo);
+        break;
+      case PEN_DOWN:
+        penDown(&leftWheel, &rightWheel, &penServo);
+        break;
     }
     
   }

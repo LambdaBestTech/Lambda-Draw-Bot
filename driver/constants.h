@@ -34,4 +34,10 @@
 // BLUETOOTH COMMAND CONSTANTS
 
 #define DRAW_THETA_TAU 10
-#define STOP_DRAWING 11
+#define MOVE_FORWARD   11
+#define MOVE_BACKWARD  12
+#define MOVE_RIGHT     13
+#define MOVE_LEFT      14
+#define MOVE_STOP      15
+#define PEN_UP         16
+#define PEN_DOWN       17

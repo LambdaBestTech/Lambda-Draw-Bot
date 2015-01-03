@@ -1,6 +1,12 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
+void controlForward(Servo *leftWheel, Servo *rightWheel);
+void controlStop(Servo *leftWheel, Servo *rightWheel);
+void controlBackward(Servo *leftWheel, Servo *rightWheel);
+void controlRight(Servo *leftWheel, Servo *rightWheel);
+void controlLeft(Servo *leftWheel, Servo *rightWheel);
+
 void forward(Servo *leftWheel, Servo *rightWheel, int duration);
 void backward(Servo *leftWheel, Servo *rightWheel, int duration);
 void stopBot(Servo *leftWheel, Servo *rightWheel, int duration);
