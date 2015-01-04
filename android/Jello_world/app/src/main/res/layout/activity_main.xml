@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#590000">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/control_layer"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <ImageView
+        android:layout_width="188dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:src="@drawable/button4"
+        android:id="@+id/"
+        android:layout_above="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_height="68dp"
+        android:layout_width="188dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:src="@drawable/button5"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:src="@drawable/joystick"
+        android:layout_gravity="left|center_vertical"
+        android:id="@+id/imageView"
+        android:paddingRight="25dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/"
+        android:layout_toStartOf="@+id/" />
+
+    <ImageView
+        android:layout_width="188dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button3"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_height="51dp"
+        android:layout_width="188dp"
+        android:src="@drawable/button2"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
