@@ -3,62 +3,115 @@
     android:layout_height="fill_parent"
     android:background="#590000">
 
-    <ImageView
+    <!-- container for all the buttons -->
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/control_layer"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:background="@drawable/control_layer"
+        android:weightSum="1">
 
-    <ImageView
-        android:layout_width="188dp"
-        android:layout_height="85dp"
-        android:layout_gravity="center"
-        android:src="@drawable/button4"
-        android:id="@+id/"
-        android:layout_above="@+id/imageView2"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        <!-- DPad Buttons -->
 
-    <ImageView
-        android:layout_height="68dp"
-        android:layout_width="188dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:src="@drawable/button5"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/imageView2" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:id="@+id/dPad">
 
-    <ImageView
-        android:layout_width="155dp"
-        android:layout_height="155dp"
-        android:src="@drawable/joystick"
-        android:layout_gravity="left|center_vertical"
-        android:id="@+id/imageView"
-        android:paddingRight="25dp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/"
-        android:layout_toStartOf="@+id/" />
+            <Space
+                style="@style/DPadButtons"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/DPadCenter"/>
 
-    <ImageView
-        android:layout_width="188dp"
-        android:layout_height="50dp"
-        android:src="@drawable/button3"
-        android:layout_gravity="center_horizontal|bottom"
-        android:id="@+id/"
-        android:layout_above="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+            <Button
+                style="@style/DPadButtons"
+                android:text="up"
+                android:id="@+id/buttonForward"
+                android:layout_above="@+id/DPadCenter"
+                android:layout_toRightOf="@+id/buttonLeft"/>
+            <Button
+                style="@style/DPadButtons"
+                android:text="rh"
+                android:id="@+id/buttonRight"
+                android:layout_toRightOf="@id/buttonForward"
+                android:layout_below="@id/buttonForward"/>
+            <Button
+                style="@style/DPadButtons"
+                android:text="lf"
+                android:id="@+id/buttonLeft"
+                android:layout_toLeftOf="@+id/DPadCenter"
+                android:layout_below="@id/buttonForward"/>
+            <Button
+                style="@style/DPadButtons"
+                android:text="dn"
+                android:id="@+id/buttonDown"
+                android:layout_below="@+id/DPadCenter"
+                android:layout_toRightOf="@id/buttonLeft"/>
 
-    <ImageView
-        android:layout_height="51dp"
-        android:layout_width="188dp"
-        android:src="@drawable/button2"
-        android:layout_gravity="center_horizontal|bottom"
-        android:id="@+id/imageView3"
-        android:layout_below="@+id/"
-        android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- Midsection Buttons -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_weight=".4">
+
+            <ImageView
+                style="@style/MidSectionButtons"
+                android:id="@+id/buttonDrawTT"
+                android:src="@drawable/button4"/>
+
+            <ImageView
+                style="@style/MidSectionButtons"
+                android:id="@+id/buttonRecalibrate"
+                android:src="@drawable/button3"/>
+
+            <ImageView
+                style="@style/MidSectionButtons"
+                android:id="@+id/buttonTerminate"
+                android:src="@drawable/button2" />
+
+            <ImageView
+                style="@style/MidSectionButtons"
+                android:paddingBottom="20dp"
+                android:src="@drawable/button5"/>
+
+        </LinearLayout>
+
+        <!-- A and B buttons (Pen Up, Pen Down) -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="30dp"
+                android:weightSum="1">
+                <Button
+                    style="@style/ABButtons"
+                    android:id="@+id/penUp"
+                    android:text="PU"/>
+                <Button
+                    style="@style/ABButtons"
+                    android:id="@+id/penDown"
+                    android:text="PD"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

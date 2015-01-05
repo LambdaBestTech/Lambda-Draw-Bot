@@ -6,4 +6,24 @@
         <item name="windowActionBar">false</item>
 
     </style>
+
+    <style name="MidSectionButtons">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="DPadButtons">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="ABButtons">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">.5</item>
+    </style>
 </resources>
